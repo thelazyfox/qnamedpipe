@@ -10,5 +10,5 @@ INCLUDEPATH += .
 CONFIG += staticlib
 
 # Input
-HEADERS += QSerialPort.h
-SOURCES += QSerialPort.cpp
+HEADERS += QNamedPipe.h
+SOURCES += QNamedPipe.cpp

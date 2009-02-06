@@ -6,14 +6,16 @@
 #include <QIODevice>
 #include <QString>
 
-class QSerialPort : public QIODevice
+class QNamedPipe : public QIODevice
 {
 public:
-    QSerialPort(QString filename, QObject *parent = 0);
-    ~QSerialPort();
+    QNamedPipe(QString filename, QObject *parent = 0);
+    ~QNamedPipe();
     
     bool open(OpenMode mode = 0);
     void close();
+
+    qint64 bytesAvailable() const;
 
 protected:
     qint64 readData(char *data, qint64 maxSize);
